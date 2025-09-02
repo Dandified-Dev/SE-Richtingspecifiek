@@ -1,0 +1,25 @@
+package nl.hva.codecs;
+
+import nl.hva.Recordings.Recording;
+
+public class WAVCodec implements Codec{
+    @Override
+    public String decode() {
+        return "Decoding aac";
+    }
+
+    @Override
+    public Recording encode(String title) {
+        return null;
+    }
+
+    @Override
+    public FileType getFileType() {
+        return FileType.WAV;
+    }
+
+    @Override
+    public String getCodecInformation() {
+        return CodecDescriptions.WAV_DESCRIPTION;
+    }
+}
