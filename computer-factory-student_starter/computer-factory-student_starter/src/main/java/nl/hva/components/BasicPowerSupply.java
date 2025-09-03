@@ -3,6 +3,6 @@ package nl.hva.components;
 public class BasicPowerSupply implements PowerSupply {
     @Override
     public String getDetails() {
-        return "Basic Power Supply";
+        return "Basic Power Supply 450 watts";
     }
 }

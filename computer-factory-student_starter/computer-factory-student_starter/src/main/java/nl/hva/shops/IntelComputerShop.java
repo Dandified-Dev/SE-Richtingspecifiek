@@ -9,10 +9,14 @@ import nl.hva.factories.IntelGamingComputerComponentFactory;
 public class IntelComputerShop extends ComputerShop{
     @Override
     protected Computer buildComputer(String computerType) {
+        Computer computer;
         if(computerType.equals(ComputerTypes.BASIC_COMPUTER)){
-            return new IntelComputer(new IntelBasicComputerComponentFactory());
+            computer = new IntelComputer(new IntelBasicComputerComponentFactory());
+            computer.setName("Intel Basic PC");
         }else {
-            return new IntelComputer(new IntelGamingComputerComponentFactory());
+            computer = new IntelComputer(new IntelGamingComputerComponentFactory());
+            computer.setName("Intel Gaming PC");
         }
+        return computer;
     }
 }

@@ -1,8 +1,11 @@
 package nl.hva.factories;
 
 import nl.hva.components.*;
+import nl.hva.components.AMDFastProcessor;
+import nl.hva.components.AMDGraphicsCard;
+import nl.hva.components.AMDMotherBoard;
 
-public class IntelGamingComputerComponentFactory implements ComputerComponentFactory {
+public class AMDGamingComputerComponentFactory implements ComputerComponentFactory{
     @Override
     public ComputerCase selectCase() {
         return new GamingComputerCase();
@@ -15,12 +18,12 @@ public class IntelGamingComputerComponentFactory implements ComputerComponentFac
 
     @Override
     public Processor selectProcessor() {
-        return new IntelFastProcessor();
+        return new AMDFastProcessor();
     }
 
     @Override
     public MotherBoard selectMotherBoard() {
-        return new IntelMotherBoard();
+        return new AMDMotherBoard();
     }
 
     @Override
@@ -30,7 +33,7 @@ public class IntelGamingComputerComponentFactory implements ComputerComponentFac
 
     @Override
     public GraphicsCard selectGraphicsCard() {
-        return new NVidiaGraphicsCard();
+        return new AMDGraphicsCard();
     }
 
     @Override

@@ -4,14 +4,13 @@ import nl.hva.factories.ComputerComponentFactory;
 
 public class IntelComputer extends Computer {
 
-
     public IntelComputer(ComputerComponentFactory factory) {
         super(factory);
     }
 
     @Override
     public void prepare() {
-        name = "Intel";
+        System.out.println("Building " + name);
         computerCase = computerComponentFactory.selectCase();
         motherBoard = computerComponentFactory.selectMotherBoard();
         processor = computerComponentFactory.selectProcessor();

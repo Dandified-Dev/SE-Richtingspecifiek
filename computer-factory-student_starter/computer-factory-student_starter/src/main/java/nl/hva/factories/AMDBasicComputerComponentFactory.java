@@ -1,8 +1,10 @@
 package nl.hva.factories;
 
 import nl.hva.components.*;
+import nl.hva.components.AMDMotherBoard;
+import nl.hva.components.AMDProcessor;
 
-public class IntelBasicComputerComponentFactory implements ComputerComponentFactory {
+public class AMDBasicComputerComponentFactory implements ComputerComponentFactory{
     @Override
     public ComputerCase selectCase() {
         return new BasicComputerCase();
@@ -15,12 +17,12 @@ public class IntelBasicComputerComponentFactory implements ComputerComponentFact
 
     @Override
     public Processor selectProcessor() {
-        return new IntelProcessor();
+        return new AMDProcessor();
     }
 
     @Override
     public MotherBoard selectMotherBoard() {
-        return new IntelMotherBoard();
+        return new AMDMotherBoard();
     }
 
     @Override
