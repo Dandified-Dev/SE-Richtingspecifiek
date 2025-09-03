@@ -10,7 +10,7 @@ public class AACCodec implements Codec{
 
     @Override
     public Recording encode(String title) {
-        return null;
+        return new Recording(title, FileType.AAC);
     }
 
     @Override
